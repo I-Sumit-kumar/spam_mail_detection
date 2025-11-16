@@ -1,157 +1,161 @@
-📧 Spam Mail Detection Using Machine Learning
+<h1 align="center">📧 Spam Mail Detection Using Machine Learning</h1>
 
-A machine learning project that classifies emails as spam or ham (non-spam) using Natural Language Processing (NLP) and supervised learning algorithms. This system supports automated email filtering and enhances email security by identifying malicious or unwanted messages.
+<p align="center">
+  <img src="https://img.shields.io/badge/Machine%20Learning-Python-blue?style=flat-square" alt="ML Python">
+  <img src="https://img.shields.io/badge/NLP-NLTK%2C%20Scikit--learn-green?style=flat-square" alt="NLP">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="MIT">
+</p>
 
-🚀 Project Overview
+<p align="center">
+  <b>
+    A supervised learning project to classify emails as spam or ham using Natural Language Processing (NLP).
+  </b><br>
+  Supports automated email filtering and easy extensibility!
+</p>
 
-This project builds a complete spam-detection pipeline using:
+---
 
-Text preprocessing
+## 🚀 Project Overview
 
-Feature extraction using TF-IDF
+A complete pipeline for spam classification:
 
-Supervised classification models
+- **Text preprocessing**: Clean and standardize email content
+- **Feature extraction:** TF-IDF vectorization
+- **Classification models:** Naïve Bayes, Logistic Regression, SVM
+- **Evaluation:** Accuracy, precision, recall, and confusion matrix
+- **Prediction:** Enter any email, get instant spam/ham prediction!
 
-Evaluation using accuracy, confusion matrix, and precision-recall metrics
+---
 
-The model is trained on labeled email data and can classify new unseen messages as spam or ham.
+## 📂 Project Structure
 
-📂 Project Structure
+```
 spam_mail_detection/
-│── spam_mail_detection.ipynb     # Full training + testing pipeline
+│── spam_mail_detection.ipynb     # Training & prediction notebook
 │── data/
 │     ├── spam.csv                # Spam emails
 │     └── ham.csv                 # Non-spam emails
 │── README.md
+```
 
-🧠 Machine Learning Workflow
+---
 
-Data Collection
-Labeled dataset containing examples of spam and ham emails.
+## 🧠 Machine Learning Workflow
 
-Data Preprocessing
+### 1. Data Collection
+> Labeled dataset with examples of spam and ham emails.
 
-Lowercasing
+### 2. Data Preprocessing
 
-Removing punctuation
+- Lowercasing
+- Removing punctuation
+- Removing stopwords
+- Tokenization
 
-Removing stopwords
+### 3. Feature Engineering
 
-Tokenization
+- **TF-IDF Vectorization:** Convert text documents to numerical feature vectors.
 
-Feature Engineering
+### 4. Model Building
 
-TF-IDF Vectorization transforms text into numerical feature vectors.
+- Naïve Bayes *(best for text!)*
+- Logistic Regression
+- SVM
 
-Model Building
-Typically used models include:
+### 5. Model Evaluation
 
-Naïve Bayes (best for text)
+- **Accuracy**
+- **Precision & Recall**
+- **Confusion Matrix**
 
-Logistic Regression
+### 6. Prediction
 
-SVM
+Type an email, and the model predicts:
 
-Model Evaluation
+- **Spam**
+- **Ham**
 
-Accuracy
+---
 
-Precision & Recall
+## 🔧 Tech Stack
 
-Confusion Matrix
+| Component           | Technology                  |
+|---------------------|----------------------------|
+| Programming         | Python                     |
+| NLP                 | NLTK, Scikit-Learn         |
+| Vectorization       | TF-IDF                     |
+| ML Algorithms       | Naïve Bayes, Logistic Reg., SVM |
+| Environment         | Jupyter Notebook / Colab   |
 
-Prediction
-The user can enter any text email and the model predicts whether it's spam or not.
+---
 
-🔧 Tech Stack
-Component	Technology
-Programming Language	Python
-NLP	NLTK / Scikit-Learn
-Vectorization	TF-IDF
-ML Algorithms	Naïve Bayes, Logistic Regression, SVM
-Environment	Jupyter Notebook / Google Colab
-🛠 Installation
+## 🛠 Installation
 
-Clone the repository and install dependencies:
-
+```bash
 git clone https://github.com/yourusername/spam_mail_detection.git
 cd spam_mail_detection
 pip install -r requirements.txt
-
+```
 
 Typical requirements:
+- pandas
+- numpy
+- scikit-learn
+- nltk
+- matplotlib
 
-pandas
-numpy
-scikit-learn
-nltk
-matplotlib
+---
 
-▶️ How to Run
+## ▶️ How to Run
 
-Open the notebook:
+1. **Open the notebook**: `spam_mail_detection.ipynb`
+2. **Load the dataset**
+3. **Run preprocessing & training cells**
+4. **Input a custom email into the prediction cell**
+5. **See the result!** (Spam or Ham)
 
-spam_mail_detection.ipynb
+---
 
+## 🧪 Sample Inputs
 
-Load the dataset
+| **Input**                                                    | **Prediction** |
+|--------------------------------------------------------------|:--------------:|
+| "Congratulations! You’ve won a $500 gift card. Click here to claim your prize!" | Spam           |
+| "Hi team, please find attached the presentation for tomorrow’s meeting." | Ham            |
 
-Run preprocessing and training cells
+---
 
-Input a custom email into the prediction cell
+## 📊 Results
 
-The model outputs:
+- Clean confusion matrix
+- Accuracy score
+- Precision & recall for spam class
+- TF-IDF feature distribution
+- Predictions for new input emails
 
-Spam
+---
 
-Ham
+## 🔧 Customization
 
-🧪 Sample Inputs
-Spam Example
+✨ Extend the project by:
+- Adding stemming or lemmatization for smarter text normalization
+- Using BERT or transformer models for advanced NLP
+- Deploying with **Flask/Streamlit** as a web app
+- Adding real-time mail scanning
 
-"Congratulations! You’ve won a $500 gift card. Click here to claim your prize!"
+---
 
-Ham Example
+## 🤝 Contributing
 
-"Hi team, please find attached the presentation for tomorrow’s meeting."
-
-📊 Results
-
-The model produces:
-
-Clean confusion matrix
-
-Accuracy score
-
-Precision and recall for spam class
-
-TF-IDF feature distribution
-
-Predictions for new input emails
-
-🔧 Customization
-
-You can extend the project by:
-
-Adding stemming or lemmatization
-
-Using BERT or transformer-based models
-
-Deploying via Flask/Streamlit
-
-Adding real-time mail scanning
-
-🤝 Contributing
-
-Contributions, suggestions, and optimizations are welcome.
+We welcome contributions and suggestions!  
 Feel free to submit pull requests for:
 
-Better preprocessing
+- Improved preprocessing
+- Model enhancements
+- UI for predictions
 
-Model improvements
+---
 
-UI for prediction
+## 📜 License
 
-📜 License
-
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
